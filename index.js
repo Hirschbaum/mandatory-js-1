@@ -14,8 +14,19 @@ a.textContent = "Vegetables";
 lastLi.appendChild(a);
 
 //1. #about 2. #contact
+let main = document.querySelector("#main");
+
+let about = document.querySelector('#about');
+console.log(about);
+main.appendChild(about);
+
+let contact = document.querySelector("#contact");
+main.appendChild(contact);
+
+
 //adding h2 to each section: About Contact
 //slogen wrapped in p tag under #about
+
 //th instead of td in thead
 /*let thead = document.querySelector("thead");
 let tr = document.querySelector("tr");
@@ -23,7 +34,7 @@ let td = document.querySelector("td");
 thead.appendChild(tr);
 tr.appendChild(td);
 let th = document.createElement("th");
-td.replaceWith(th);*/
+td.replaceWith(th); not working*/
 
 // <link rel="stylesheet" href="main.css">
 let head = document.querySelector("head");
