@@ -13,8 +13,6 @@ a.setAttribute("href", "#vegetables");
 a.textContent = "Vegetables";
 lastLi.appendChild(a);
 
- 
-
 // ----- swapping: 1. #about 2. #contact ---------
 let main = document.querySelector("#main");
 
@@ -43,25 +41,31 @@ let p = document.createElement("p");
 p.textContent = "We're the best in fruits & vegetables";
 about.appendChild(p);
 
-
-//th instead of td in thead
-/*let thead = document.querySelector("thead");
+// two th instead of two td in thead
+let thead = document.querySelector("thead");
 let tr = document.querySelector("tr");
-let td = document.querySelector("td");
 thead.appendChild(tr);
-tr.appendChild(td);
-let th = document.createElement("th");
-td.replaceWith(th); not working*/
 
-// --------- <link rel="stylesheet" href="main.css"> -------
+let td1 = document.querySelector("td");
+tr.appendChild(td1);
+let th1 = document.createElement("th");
+td1.replaceWith(th1); 
+th1.textContent = "Name";
 
+let td2 = document.querySelector("td");
+tr.appendChild(td2);
+let th2 = document.createElement("th");
+td2.replaceWith(th2);
+th2.textContent = "Email";
+
+// --------- add CSS link to head -------
 let head = document.querySelector("head");
 let link = document.createElement("link");
 link.setAttribute("rel", "stylesheet");
 link.setAttribute("href", "main.css");
 head.appendChild(link);
 
-//change head title
+// ----- changing head title ------
 let title = document.querySelector("title");
 console.log(title);
 title.textContent = "Fruits & Vegetables Corp";
